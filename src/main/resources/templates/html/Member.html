@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link th:href="@{/css/bootstrap.min.css}"
+        href="../css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .container {
+      max-width: 560px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="py-5 text-center">
+    <h2>상품 상세</h2>
+  </div>
+  <div>
+
+
+
+    <label for="itemId">이름</label>
+    <input type="text" id="itemId" name="name" class="form-control"
+           th:value="${member.name}"
+            readonly>
+  </div>
+  <div>
+    <label for="itemName">아이디</label>
+    <input type="text" id="itemName" name="id" class="form-control"
+           th:value="${member.id}"
+           readonly>
+  </div>
+  <div>
+    <label for="price">비밀 번호</label>
+    <input type="text" id="price" name="pwd" class="form-control"
+           th:value="${member.pwd}"
+             readonly>
+  </div>
+  <div>
+    <label for="quantity">전화번호</label>
+    <input type="text" id="quantity" name="call" class="form-control"
+           th:value="${member.call}"
+              readonly>
+  </div>
+  <hr class="my-4">
+  <div class="row">
+    <div class="col">
+      <button class="w-100 btn btn-primary btn-lg"
+              onclick="location.href='SignEdit.html'"
+              th:onclick="|location.href='@{/}'|"
+              type="button">용도 미지정</button>
+    </div>
+    <div class="col">
+      <button class="w-100 btn btn-secondary btn-lg"
+              onclick="location.href='Members.html'"
+              th:onclick="|location.href='@{/members}'|"
+              type="button">목록으로</button>
+    </div>
+  </div>
+</div> <!-- /container -->
+</body>
+</html>
